@@ -90,6 +90,16 @@ main {
     background: url(../images/hero-image.webp) no-repeat center center/cover;
 }
 
+#circle-cover-bg {
+    background: url(../images/reasons-image.webp) no-repeat cover center/cover;
+    width: 90vw;
+    height: 90vw;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
 #reasons {
     width: 90%;
     margin: 20px auto;
