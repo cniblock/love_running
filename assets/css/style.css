@@ -23,6 +23,10 @@ h3 {
     color: #252525;
 }
 
+.hidden-heading {
+    display: none;
+}
+
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -182,12 +186,27 @@ i {
     background-color: rgba(0, 0, 0, .6);
     padding: 15px;
     text-align: center;
+    /* This will not wrap on screens of less than 400px wide.
+    Each div will expand to fill the available space on its row */
     flex-basis: 200px;
     flex-grow: 1;
+    /* Creates a grid of meetup time divs over the background image */
+    border: 2px solid white;
 }
 
 #times h3 {
     color: #fafafa;
+}
+
+/* Gallery Page */
+
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
 }
 
 #social-networks {
@@ -206,6 +225,7 @@ i {
 
 @media screen and (min-width: 768px) {
 
+    /* Header */
     nav {
         display: block;
         position: relative;
@@ -216,7 +236,6 @@ i {
 
     #menu {
         display: flex;
-
     }
 
     #menu>li {
@@ -233,15 +252,19 @@ i {
         margin: 0 0.5rem;
     }
 
+    /* Main content */
     main {
+        /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
+    /* Hero */
     #cover-text {
         width: 300px;
         right: 50px;
     }
 
+    /* Reasons section */
     #benefits-physical,
     #benefits-mental {
         display: flex;
@@ -260,14 +283,16 @@ i {
     }
 }
 
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-
 }
 
-@media screen and (min-width: 120px) {
+@media screen and (min-width: 1200px) {
+
+    /* Reasons section */
     #benefits {
         display: flex;
         flex-direction: row;
@@ -278,7 +303,7 @@ i {
     }
 
     #benefits-image {
-        order: 0;
+        order: 0
     }
 
     #benefits-mental {
@@ -292,5 +317,4 @@ i {
     #benefits-physical>div {
         align-self: flex-end;
     }
-
 }
