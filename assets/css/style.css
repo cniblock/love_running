@@ -247,3 +247,31 @@ i {
     }
 
 }
+
+@media screen and (min-width: 120px) {
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0;
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical>div {
+        align-self: flex-end;
+    }
+
+}
